@@ -1,19 +1,14 @@
-var x = 100;
+let circle;
 
 function setup() {
   createCanvas(500, 500);
+
+  circle = new Circle(100, 100, 50);
 }
 
 
 function draw() {
-  background(0,0,0);
-   
-  if(mouseIsPressed) {
-    fill(255,0,0);
-  } else {
-    fill(0,255,0);
-  }
-  ellipse(100,x,50,50);
-
-  x -= 1;
+  background(0, 0, 0);
+  circle.update();
+  circle.draw();
 }
